@@ -22,15 +22,15 @@ function roundPlay(playerSelection, computerSelection) {
 		console.log("Please enter a valid choice!");
 	} else {
 		if (computerSelection === playerSelection) {
-			console.log("It's a TIE");
+			console.log("It's a tie");
 		} else if (
 			(computerSelection === "rock" && playerSelection === "paper") ||
 			(computerSelection === "paper" && playerSelection === "scissor") ||
 			(computerSelection === "scissor" && playerSelection === "rock")
 		) {
-			console.log("You WIN");
+			console.log("You won");
 		} else {
-			console.log("Your LOSE");
+			console.log("You lost");
 		}
 	}
 }
