@@ -1,5 +1,7 @@
+// function to generate number from 0 -> 3
 function getComputerChoice() {
 	let randomNumber = Math.floor(Math.random() * 3);
+	// assign every number to a choice "rock, paper, or scissors"
 	switch (randomNumber) {
 		case 0: {
 			return "rock";
@@ -14,6 +16,7 @@ function getComputerChoice() {
 		}
 	}
 }
+// the main round game-play
 function roundPlay(playerSelection, computerSelection) {
 	if (typeof playerSelection != "string") {
 		console.log("Please enter a valid choice!");
