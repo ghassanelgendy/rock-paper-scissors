@@ -16,35 +16,39 @@ function getComputerChoice() {
 		}
 	}
 }
+
+const buttons = Array.from(document.querySelectorAll(".card"));
+
+buttons.forEach((button) => {
+	button.addEventListener("click", (e) => {
+		roundPlay(button.id, getComputerChoice());
+	});
+});
+
 // the main round game-play
+let roundNumber = 0;
 function roundPlay(playerSelection, computerSelection) {
-	if (typeof playerSelection != "string") {
-		console.log("Please enter a valid choice!");
+	if (computerSelection === playerSelection) {
+		console.log("It's a tie");
+		roundNumber++;
+	} else if (
+		(computerSelection === "rock" && playerSelection === "paper") ||
+		(computerSelection === "paper" && playerSelection === "scissor") ||
+		(computerSelection === "scissor" && playerSelection === "rock")
+	) {
+		roundNumber++;
+
+		console.log("You won");
 	} else {
-		if (computerSelection === playerSelection) {
-			console.log("It's a tie");
-		} else if (
-			(computerSelection === "rock" && playerSelection === "paper") ||
-			(computerSelection === "paper" && playerSelection === "scissor") ||
-			(computerSelection === "scissor" && playerSelection === "rock")
-		) {
-			console.log("You won");
-		} else {
-			console.log("You lost");
-		}
+		console.log("You lost");
+		roundNumber++;
 	}
-}
-function currentMove(playerSelection, computerSelection) {
-	console.log(
-		`You played ${playerSelection} the computer played ${computerSelection} `
-	);
-}
-
-const rounds = prompt("How many rounds do you want to play?");
-
-for (let i = 0; i < rounds; i++) {
-	let playerSelection = prompt("Enter your choice!").toLowerCase();
-	let computerSelection = getComputerChoice();
-	roundPlay(playerSelection, computerSelection);
-	currentMove(playerSelection, computerSelection);
+	if (roundNumber === 5) {
+		console.log("Game Over!");
+	}
+	function currentMove(playerSelection, computerSelection) {
+		console.log(
+			`You played ${playerSelection} the computer played ${computerSelection} `
+		);
+	}
 }
