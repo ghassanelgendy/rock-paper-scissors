@@ -26,47 +26,72 @@ function getComputerChoice() {
 		}
 	}
 }
-
-//loops through the buttons and adds an event listener to each one
+// initializing scores
+let playerScore = 0;
+let computerScore = 0;
+// player's score element
+function updateScore() {
+	document.querySelector(".player").innerHTML = playerScore;
+	document.querySelector(".computer").innerHTML = computerScore;
+}
+// loops through the buttons and adds an event listener to each one
 buttons.forEach((button) => {
 	button.addEventListener("click", (e) => {
 		roundPlay(button.id, getComputerChoice(), button);
 	});
 });
 
-//remove transition function
+// remove transition function
 function removeTransition(e) {
 	if (e.propertyName === "transform") {
 		this.classList.remove("playing");
 	}
 }
 
-//loops through the buttons and remove transition
+// loops through the buttons and remove transition
 buttons.forEach((button) => {
 	button.addEventListener("transitionend", removeTransition);
 });
-// current move
+// current move element
 const currentMove = document.querySelector(".move");
+// current move function
+function showMove(playerSelection, computerSelection, winner) {
+	currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br><span class="highlights"> ${winner} won!</span>`;
+}
+// initialize the round winner
 let winner = "you";
 // the main round game-play function
 function roundPlay(playerSelection, computerSelection, button) {
 	// add transition class to the button
 	button.classList.add("playing");
 	if (computerSelection === playerSelection) {
-		currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br> IT'S A TIE!`;
+		currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br> <span class="highlights-tie">IT'S A TIE!</span>`;
 	} else if (
 		(computerSelection === "rock" && playerSelection === "paper") ||
 		(computerSelection === "paper" && playerSelection === "scissors") ||
 		(computerSelection === "scissors" && playerSelection === "rock")
 	) {
 		winner = "You";
+		playerScore++;
+		updateScore();
 		showMove(playerSelection, computerSelection, winner);
 	} else {
 		winner = "Computer";
+		computerScore++;
+		updateScore();
+
 		showMove(playerSelection, computerSelection, winner);
 	}
-}
-
-function showMove(playerSelection, computerSelection, winner) {
-	currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br> ${winner} won!`;
+	if (playerScore === 10 && winner === "You") {
+		alert("Bruh u ok?");
+	}
+	if (playerScore === 20 && winner === "You") {
+		alert("Bruh fr u ok?!");
+	}
+	if (playerScore === 40 && winner === "You") {
+		alert("Fine, fine you win..");
+		playerScore = 0;
+		computerScore = 0;
+		updateScore();
+	}
 }
