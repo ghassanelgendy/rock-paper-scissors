@@ -60,7 +60,14 @@ function showMove(playerSelection, computerSelection, winner) {
 }
 // initialize the round winner
 let winner = "you";
+//bgmuic
+
+let bgmusic = document.querySelector("#bgmusic");
+bgmusic.volume = 0.11;
+bgmusic.play();
+
 // the main round game-play function
+
 function roundPlay(playerSelection, computerSelection, button) {
 	// add transition class to the button
 	button.classList.add("playing");
@@ -83,10 +90,10 @@ function roundPlay(playerSelection, computerSelection, button) {
 		showMove(playerSelection, computerSelection, winner);
 	}
 	if (playerScore === 10 && winner === "You") {
-		alert("Bruh u ok?");
+		alert("Bruh u ok? 10 wins enough..");
 	}
 	if (playerScore === 20 && winner === "You") {
-		alert("Bruh fr u ok?!");
+		alert("Bruh fr u ok?! you look addicted xD");
 	}
 	if (playerScore === 40 && winner === "You") {
 		alert("Fine, fine you win..");
