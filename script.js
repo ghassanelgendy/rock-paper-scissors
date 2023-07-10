@@ -63,9 +63,16 @@ let winner = "you";
 //bgmuic
 
 let bgmusic = document.querySelector("#bgmusic");
-bgmusic.volume = 0.11;
-bgmusic.play();
-
+function playAudio() {
+	if (bgmusic.paused) {
+		bgmusic.volume = 0.11;
+		bgmusic.play();
+	} else {
+		bgmusic.pause();
+	}
+}
+let audioToggle = document.querySelector("#audioToggle");
+audioToggle.addEventListener("click", playAudio);
 // the main round game-play function
 
 function roundPlay(playerSelection, computerSelection, button) {

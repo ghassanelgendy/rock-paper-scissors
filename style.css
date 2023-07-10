@@ -307,9 +307,8 @@ a {
 
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    margin-left: 3rem;
-    height: 0;
+
+.audio-toggle {
+    margin-left: 20px;
+    font-size: 40px;
 }
