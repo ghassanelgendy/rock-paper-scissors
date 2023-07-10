@@ -1,5 +1,5 @@
 # Rock Paper Scissors Game
-Project to create the well-known rock paper scissors game using only HTML, CSS and Vanilla JS.
+Project to create the well-known [rock paper scissors](https://en.wikipedia.org/wiki/Rock_paper_scissors) game using only HTML, CSS and Vanilla JS.
 
 From <a href = "https://www.theodinproject.com/paths/foundations/courses/foundations" >The Odin Project's curriculum.</a>
 
