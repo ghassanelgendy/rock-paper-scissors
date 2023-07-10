@@ -2,13 +2,11 @@
 
 :root {
     /*Palette*/
-    --prim-clr1: #F2BE22;
-    --prim-clr2: #F29727;
-    --prim-clr3: #F24C3D;
+    --prim-clr1: #E38A5D;
     --sec-clr: #210124;
-    --nav-footer-clr: #35D0BA;
+    --nav-footer-clr: #52516d;
     --tertiary-clr: ;
-    --bg-clr: #22A699;
+    --bg-clr: #575757;
     /*Fonts*/
     --ff-accent: 'Outfit', sans-serif;
     --ff-regular: 'Carter One', cursive;
@@ -40,13 +38,16 @@
   4. Improve text rendering
 */
 body {
+    background-image: url(./pexels-artem-podrez-7233131.jpg);
+    background-size: cover;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    height: 95%;
-    background-color: var(--bg-clr);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: var(--ff-regular);
+    color: whitesmoke;
+    letter-spacing: 0.08rem;
 }
 
 
@@ -86,6 +87,48 @@ h6 {
     overflow-wrap: break-word;
 }
 
+.title {
+    text-align: center;
+}
+
+.nav img {
+    width: auto;
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-right: auto;
+}
+
+.nav {
+    background-color: var(--prim-clr1);
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    height: 6em;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 10px 2px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+footer {
+    background-color: var(--prim-clr1);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1.2rem 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.6rem;
+
+}
 
 .content {
     display: flex;
@@ -93,6 +136,8 @@ h6 {
     align-items: center;
     justify-content: flex-start;
     height: 100%;
+    margin: 3rem 15px 0 15px;
+    padding: 0 0.5rem;
 }
 
 .header {
@@ -119,12 +164,12 @@ h6 {
 }
 
 .cards .blue {
-    background-color: var(--prim-clr2);
+    background-color: var(--prim-clr1);
     flex: 1;
 }
 
 .cards .green {
-    background-color: var(--prim-clr3);
+    background-color: var(--prim-clr1);
     flex: 1 0 0;
 }
 
@@ -163,7 +208,7 @@ h6 {
 }
 
 .card-computer {
-    background-color: #2c1b1d;
+    background-color: #6B2C78;
     flex: 1;
     display: flex;
     align-items: center;
@@ -188,11 +233,12 @@ h6 {
     min-width: 6rem;
     -ms-transition: 300ms;
     -o-transition: 300ms;
-    flex: 1;
+    margin-bottom: 10px;
 }
 
 .move {
     text-align: center;
     font-size: 1.3rem;
     margin: 1.1rem;
+
 }
