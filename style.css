@@ -2,10 +2,13 @@
 
 :root {
     /*Palette*/
-    --prim-clr: #750D37;
+    --prim-clr1: #F2BE22;
+    --prim-clr2: #F29727;
+    --prim-clr3: #F24C3D;
     --sec-clr: #210124;
+    --nav-footer-clr: #35D0BA;
     --tertiary-clr: ;
-    --bg-clr: #DBF9F0;
+    --bg-clr: #22A699;
     /*Fonts*/
     --ff-accent: 'Outfit', sans-serif;
     --ff-regular: 'Carter One', cursive;
@@ -39,14 +42,11 @@
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    height: 80vh;
+    height: 95%;
     background-color: var(--bg-clr);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     font-family: var(--ff-regular);
-
 }
 
 
@@ -87,9 +87,15 @@ h6 {
 }
 
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+}
 
 .header {
-    margin-top: 80px;
     display: flex;
     max-width: 40rem;
     flex-direction: column;
@@ -99,7 +105,7 @@ h6 {
 }
 
 .cards {
-    margin: 30px;
+    margin: 0px 20px 20px;
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -108,17 +114,17 @@ h6 {
 }
 
 .cards .red {
-    background-color: #f43f5e;
+    background-color: var(--prim-clr1);
     flex: 1
 }
 
 .cards .blue {
-    background-color: #3b82f6;
+    background-color: var(--prim-clr2);
     flex: 1;
 }
 
 .cards .green {
-    background-color: #22c55e;
+    background-color: var(--prim-clr3);
     flex: 1 0 0;
 }
 
@@ -154,7 +160,6 @@ h6 {
     -moz-transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     -o-transform: scale(1.1, 1.1);
-    box-shadow: #DBF9F0 10px 10px 50px;
 }
 
 .card-computer {
@@ -183,10 +188,11 @@ h6 {
     min-width: 6rem;
     -ms-transition: 300ms;
     -o-transition: 300ms;
+    flex: 1;
 }
 
 .move {
-    padding-top: 20px;
     text-align: center;
     font-size: 1.3rem;
+    margin: 1.1rem;
 }
