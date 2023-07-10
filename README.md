@@ -16,6 +16,8 @@ From <a href = "https://www.theodinproject.com/paths/foundations/courses/foundat
 * Visual Studio Code
 * Linux bash
 * Git and GitHub
+* uiverse
+* freepik
 
 ### Third party code
 
