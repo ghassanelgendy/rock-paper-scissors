@@ -34,9 +34,76 @@
 			name="msapplication-config"
 			content="https://ghassanelgendy.github.io/assets/favicon/browserconfig.xml" />
 		<meta name="theme-color" content="#ffffff" />
+		<script
+			src="https://kit.fontawesome.com/d954325b52.js"
+			crossorigin="anonymous"></script>
 	</head>
-
-	<body>
+	<body class="body">
+		<div class="nav">
+			<div class="img-holder">
+				<img
+					src="https://ghassanelgendy.github.io/assets/img/mojis/clouds.png"
+					alt="Me with clouds around my head" />
+			</div>
+			<div class="title">
+				<h1>Rock Paper Scissors?</h1>
+			</div>
+			<div class="audio-toggle">
+				<i
+					id="audioToggle"
+					alt="audio toggle"
+					title="Toggle audio"
+					class="fa-solid fa-volume-high"></i>
+			</div>
+		</div>
+		<div class="content">
+			<div class="header">
+				<h2>Choose your weapon</h2>
+			</div>
+			<div class="cards">
+				<button id="rock" class="card red">
+					<i class="fa-regular fa-hand-back-fist"></i>
+				</button>
+				<button id="paper" class="card blue">
+					<i class="fa-regular fa-hand"></i>
+				</button>
+				<button id="scissors" class="card green">
+					<i class="fa-regular fa-hand-scissors"></i>
+				</button>
+			</div>
+			<div class="move">
+				<span class="highlights">Rules are easy</span><br />
+				<span class="highlights">
+					Defeat the highly sophisticated AI with your superior strategy and
+					skills!
+				</span>
+			</div>
+			<div class="cards">
+				<div id="computerSelection" class="card-computer">
+					<i class="fa-solid fa-microchip fa-beat"></i>
+				</div>
+			</div>
+		</div>
+		<div class="scores">
+			<div class="who">
+				<div class="you">You</div>
+				<div class="you">Computer</div>
+			</div>
+			<div class="score">
+				<div class="player scoreBox">0</div>
+				<div class="computer scoreBox">0</div>
+			</div>
+		</div>
+		<footer>
+			Copyright © Ghassan Elgendy In conjunction with The Odin Project
+			<a href="https://github.com/ghassanelgendy">
+				<i
+					alt="my github account"
+					title="Visit my GitHub!"
+					class="fa-brands fa-github fa-xl"></i>
+			</a>
+		</footer>
+		<audio loop src="./sounds/bgmusic.mp3" id="bgmusic"></audio>
 		<script src="./script.js"></script>
 	</body>
 </html>

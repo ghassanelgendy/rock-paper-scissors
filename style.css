@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Martian+Mono:wght@800&display=swap');
+
+:root {
+    /*Palette*/
+    --prim-clr1: #E38A5D;
+    --sec-clr: #cc805b;
+    --nav-footer-clr: #52516d;
+    --tertiary-clr: ;
+    --bg-clr: #575757;
+    /*Fonts*/
+    --ff-accent: 'Outfit', sans-serif;
+    --ff-regular: 'Carter One', cursive;
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    background-image: url(./bg.jpg);
+    background-color: #eee;
+    background-size: cover;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--ff-regular);
+    color: rgb(27, 27, 27);
+    letter-spacing: 0.08rem;
+}
+
+
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.title {
+    text-align: center;
+}
+
+.nav img {
+    min-width: 110px;
+    max-width: 110px;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 20px;
+    margin-right: auto;
+    flex-shrink: 0;
+    flex-basis: 1;
+    flex-grow: 0;
+}
+
+.nav {
+    background-color: var(--sec-clr);
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1rem;
+    height: 6em;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 10px 2px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+footer {
+    background-color: var(--sec-clr);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 0.2rem;
+    flex-direction: column;
+    font-size: 0.99rem;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+    font-size: 1.4rem;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 3rem 15px 0 15px;
+    padding: 0 0.5rem;
+}
+
+.highlights {
+    background-color: #E38A5D;
+    padding: 0 0.8rem 0 0.8rem;
+}
+
+.highlights-tie {
+    background-color: rgb(133, 40, 40);
+    padding: 0 0.8rem 0 0.8rem;
+    color: whitesmoke;
+}
+
+.header {
+    display: flex;
+    max-width: 40rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    background-color: #E38A5D;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+}
+
+.cards {
+    margin: 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards .red {
+    background-color: var(--prim-clr1);
+    flex: 1
+}
+
+.cards .blue {
+    background-color: var(--prim-clr1);
+    flex: 1;
+}
+
+.cards .green {
+    background-color: var(--prim-clr1);
+    flex: 1 0 0;
+}
+
+.cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: black solid 1px;
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: 300ms;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    font-size: 3.5rem;
+    min-width: 6rem;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+}
+
+
+.playing {
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+}
+
+.card-computer {
+    background-color: #96a0c9;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+    transition: 300ms;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    border: none;
+    font-size: 3.5rem;
+    min-width: 6rem;
+    -ms-transition: 300ms;
+    -o-transition: 300ms;
+    margin-bottom: 2rem;
+}
+
+.move {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 1.1rem;
+}
+
+.who {
+    padding-left: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-start;
+    gap: 8px
+}
+
+.scores {
+    gap: 30px;
+    font-family: 'Martian Mono', monospace;
+    background-color: rgb(227, 138, 93, .8);
+    border-radius: 30px 30px 0 0;
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem 0.7rem 1.5rem 0.7rem;
+    align-self: center;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.9rem;
+    font-size: large;
+}
+
+
+.scoreBox {
+    background-color: rgb(227, 138, 93, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+
+}
+
+
+.audio-toggle {
+    margin-left: 20px;
+    font-size: 40px;
+}
