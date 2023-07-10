@@ -65,7 +65,7 @@ let winner = "you";
 let bgmusic = document.querySelector("#bgmusic");
 function playAudio() {
 	if (bgmusic.paused) {
-		bgmusic.volume = 0.11;
+		bgmusic.volume = 0.21;
 		bgmusic.play();
 	} else {
 		bgmusic.pause();
