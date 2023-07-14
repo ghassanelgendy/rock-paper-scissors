@@ -55,9 +55,7 @@ buttons.forEach((button) => {
 // current move element
 const currentMove = document.querySelector(".move");
 // current move function
-function showMove(playerSelection, computerSelection, winner) {
-	currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br><span class="highlights"> ${winner} won!</span>`;
-}
+
 // initialize the round winner
 let winner = "you";
 //bgmuic
@@ -88,13 +86,13 @@ function roundPlay(playerSelection, computerSelection, button) {
 		winner = "You";
 		playerScore++;
 		updateScore();
-		showMove(playerSelection, computerSelection, winner);
+		currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br><span class="highlights-win"> ${winner} won!</span>`;
 	} else {
 		winner = "Computer";
 		computerScore++;
 		updateScore();
 
-		showMove(playerSelection, computerSelection, winner);
+		currentMove.innerHTML = `You chose ${playerSelection} , computer chose ${computerSelection} <br><span class="highlights"> ${winner} won!</span>`;
 	}
 	if (playerScore === 10 && winner === "You") {
 		alert("Bruh u ok? 10 wins enough..");

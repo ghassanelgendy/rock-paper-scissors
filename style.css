@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Martian+Mono:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Raleway:wght@300;500;800&display=swap');
 
 :root {
     /*Palette*/
@@ -8,8 +8,10 @@
     --tertiary-clr: ;
     --bg-clr: #575757;
     /*Fonts*/
-    --ff-accent: 'Outfit', sans-serif;
-    --ff-regular: 'Carter One', cursive;
+    --ff-accent: 'Economica',
+        sans-serif;
+    --ff-regular: 'Raleway', sans-serif;
+
     --fw-regular: 500;
     --fw-bold: 700;
 }
@@ -149,15 +151,19 @@ a {
     padding: 0 0.5rem;
 }
 
-.highlights {
+.highlights-win {
     background-color: #E38A5D;
     padding: 0 0.8rem 0 0.8rem;
 }
 
-.highlights-tie {
-    background-color: rgb(133, 40, 40);
+.highlights {
+    background-color: #96a0c9;
     padding: 0 0.8rem 0 0.8rem;
-    color: whitesmoke;
+}
+
+.highlights-tie {
+    background-color: rgb(199, 93, 93);
+    padding: 0 0.8rem 0 0.8rem;
 }
 
 .header {
@@ -280,11 +286,11 @@ a {
 
 .scores {
     gap: 30px;
-    font-family: 'Martian Mono', monospace;
+    font-family: var(--ff-accent);
+    font-weight: 700;
     background-color: rgb(227, 138, 93, .8);
     border-radius: 30px 30px 0 0;
     display: flex;
-    font-weight: 900;
     justify-content: center;
     align-items: center;
     width: fit-content;
